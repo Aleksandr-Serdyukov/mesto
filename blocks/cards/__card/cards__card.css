@@ -1,0 +1,11 @@
+@media (max-width: 630px) {
+    .cards__card {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 630px) {
+    .cards__card:last-child {
+        margin-bottom: 0px;
+    }
+}

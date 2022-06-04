@@ -1,0 +1,15 @@
+.cards__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    min-height: 79px;
+    border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 915px) {
+  .cards__menu {
+      margin: 0;
+      max-width: 282px;
+  }
+}

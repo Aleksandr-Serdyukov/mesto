@@ -1,0 +1,11 @@
+.profile__foto {
+    border-radius: 50%;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+@media (max-width: 700px) {
+    .profile__foto {
+        margin-top: 41px;
+    }
+}
