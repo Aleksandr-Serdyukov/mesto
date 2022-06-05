@@ -7,3 +7,9 @@
     font-style: normal;
     flex: 1;
 }
+
+@media (max-width: 320px) {
+  .page {
+    margin: 0;
+  }
+}

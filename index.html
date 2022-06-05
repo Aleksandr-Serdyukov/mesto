@@ -24,7 +24,7 @@
                         <p class="profile__subtitle">Исследователь океана</p>
                     </div>
                 </div>
-                <button type="button" class="button-add"></button>
+                <button type="button" class="profile__button-add"></button>
             </section>
             <section class="elements">
                 <ul class="cards">
@@ -74,13 +74,15 @@
         </footer>
     </div>
     <div class="popup">
-        <form name="content" class="popup__content">
+        <div class="popup__content">
             <button type="button" class="popup__close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type="text" name="name" class="popup__name popup__name_field_name">
-            <input type="text" name="description" class="popup__description popup__description_field_description">
-            <button type="submit" class="popup__save">Сохранить</button>
-        </form>
+            <form name="content" class="popup__form">
+              <input type="text" name="name" class="popup__input popup__input_field_name">
+              <input type="text" name="description" class="popup__input popup__input_field_description">
+              <button type="submit" class="popup__save">Сохранить</button>
+            </form>
+          </div>
     </div>
     <script src="./scripts/index.js"></script>
 </body>

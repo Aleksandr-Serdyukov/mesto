@@ -1,10 +1,7 @@
-.popup__description {
+.popup__input {
     margin: 0;
     padding: 0;
     width: 350px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     border: none;
     border-bottom: 1px solid;
     border-color: rgba(0, 0, 0, 0.2);
@@ -16,7 +13,8 @@
 }
 
 @media (max-width: 550px) {
-    .popup__description{
+    .popup__input{
         max-width: 238px;
     }
 }
+
