@@ -12,6 +12,10 @@
     line-height: 2.21;
 }
 
+.popup__input:first-child {
+    margin-bottom: 26px;
+}
+
 @media (max-width: 550px) {
     .popup__input{
         max-width: 238px;

@@ -3,7 +3,7 @@ const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__close-button');
 let formName = document.querySelector('.profile__title');
 let formSubtitle = document.querySelector('.profile__subtitle');
-let formElement = document.querySelector('.popup__content');
+let formElement = document.querySelector('.popup__form');
 let nameInput = document.querySelector('.popup__input_field_name');
 let jobInput = document.querySelector('.popup__input_field_description');
 
@@ -17,13 +17,9 @@ function openPopup() {
   jobInput.value = formSubtitle.textContent;
 }
 
-button.addEventListener('click', function(formSubmitHandler) {
-    openPopup();
-});
+button.addEventListener('click', openPopup);
 
-popupCloseButton.addEventListener('click', function(formSubmitHandler) {
-    closePopup();
-});
+popupCloseButton.addEventListener('click', closePopup);
 
 // popup.addEventListener('click', function(e) {
     // if (e.target === e.currentTarget) {
