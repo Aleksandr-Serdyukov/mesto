@@ -1,4 +1,4 @@
-.popup__input {
+.popup-card__path {
     margin: 0;
     padding: 0;
     width: 350px;
@@ -12,12 +12,12 @@
     line-height: 2.21;
 }
 
-.popup__input:first-child {
+.popup-card__path:first-child {
     margin-bottom: 26px;
 }
 
 @media (max-width: 550px) {
-    .popup__input{
+    .popup-card__path{
         max-width: 238px;
     }
 }

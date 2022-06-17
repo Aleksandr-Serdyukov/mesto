@@ -1,12 +1,12 @@
 .cards__image {
-    max-width: 282px;
-    min-height: 282px;
+    width: 282px;
+    height: 282px;
     border-radius: 10px 10px 0 0;
+    cursor: pointer;
 }
 
-@media (max-width: 915px) {
+@media (max-width: 330px) {
     .cards__image {
         width: 100%;
     }
 }
-

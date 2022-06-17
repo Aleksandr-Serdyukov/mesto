@@ -1,0 +1,31 @@
+.popup-card__create {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 358px;
+    height: 50px;
+    color: #fff;
+    background-color: #000;
+    margin-top: 48px;
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.popup-card__create:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 550px) {
+    .popup-card__create{
+        max-width: 238px;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 38px;
+    }
+}

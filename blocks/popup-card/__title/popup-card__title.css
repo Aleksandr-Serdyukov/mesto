@@ -1,4 +1,4 @@
-.popup__title {
+.popup-card__title {
     margin-bottom: 40px;
     margin-top: 0px;
     font-family: "Inter", "Arial", sans-serif;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 550px) {
-    .popup__title {
+    .popup-card__title {
         font-size: 18px;
         margin-bottom: 70px;
     }

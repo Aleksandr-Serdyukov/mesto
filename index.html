@@ -27,51 +27,22 @@
                 <button type="button" class="profile__button-add"></button>
             </section>
             <section class="elements">
-                <ul class="cards">
-                    <li class="cards__card">
-                        <img src="./image/karachaevck.png" alt="Карачаевск" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Карачаевск</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li>
-                    <li class="cards__card">
-                        <img src="./image/elbrus.png" alt="Гора Эльбрус" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Гора Эльбрус</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li><li class="cards__card">
-                        <img src="./image/dombai.png" alt="Домбай" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Домбай</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li><li class="cards__card">
-                        <img src="./image/scale.webp" alt="Гора Эльбрус" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Чжанъе Данксиа</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li><li class="cards__card">
-                        <img src="./image/kanion-antilopy.jpg" alt="Карачаевск" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Каньон Антилопы</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li><li class="cards__card">
-                        <img src="./image/gory-rorajma.jpg" alt="Карачаево-Черкесия" class="cards__image">
-                        <div class= cards__menu>
-                            <h2 class="cards__name">Гора Рорайма</h2>
-                            <button type="button" class="cards__like"></button>
-                        </div>
-                    </li>
-                </ul>
+                <ul class="cards"></ul>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">© 2020 Mesto Russia</p>
         </footer>
+        <template class="item__template"> 
+            <li class="cards__card">
+                <img src="" alt="Фото места" class="cards__image">
+                <div class= "cards__menu">
+                    <h2 class="cards__name"></h2>
+                    <button type="button" class="cards__like"></button>
+                    <button type="button" class="cards__delete"></button>
+                </div>
+            </li>
+        </template>
     </div>
     <div class="popup">
         <div class="popup__content">
@@ -83,6 +54,24 @@
               <button type="submit" class="popup__save">Сохранить</button>
             </form>
           </div>
+    </div>
+    <div class="popup-card">
+        <div class="popup-card__content">
+            <button type="button" class="popup-card__close"></button>
+            <h2 class="popup-card__title">Новое место</h2>
+            <form name="content" class="popup-card__form">
+              <input type="text" name="name" placeholder="Название" class="popup-card__path popup-card__path_field_place">
+              <input type="text" name="description" placeholder="Ссылка на картинку" class="popup-card__path popup-card__path_field_path">
+              <button type="submit" class="popup-card__create">Создать</button>
+            </form>
+          </div>
+    </div>
+    <div class="popup-image">
+        <div class="popup-image__content">
+            <button type="button" class="popup-image__close"></button>
+            <img src="" alt="Фото" class="popup-img__img">
+            <h2 class="popup-image__title"></h2>
+        </div>
     </div>
     <script src="./scripts/index.js"></script>
 </body>
