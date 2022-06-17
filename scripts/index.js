@@ -52,7 +52,7 @@ function renderItem (text) {
   test.querySelector('.cards__like').addEventListener('click', function(evt) {
     evt.target.classList.toggle('cards__like_active');
   });
-ы
+
   test.querySelector('.cards__delete').addEventListener('click', function() {
     deleteCard(test);
   });
@@ -66,7 +66,7 @@ function renderItem (text) {
   cards.appendChild(test);
 }
 
-function openPopupImg() { 
+function openPopupImg() {
   popupImg.classList.add('popup_opened');
 }
 
@@ -113,7 +113,7 @@ function closePopupImg() { // закрытие попапа увеличенно
   popupImg.classList.remove('popup_opened');
 }
 
-const buttonImg = document.querySelector('.cards__image'); // сама картинка, на нее кликаем
+const buttonImg = document.querySelector('.cards__image'); // сама картинка, на нее кликаем, чтобы открыть в попапе
 const contentImg = document.querySelector('.popup-image__content'); // все внутренности попапа
 const popupClosebuttonImg = document.querySelector('.popup-image__close');
 const titleImg = document.querySelector('.popup-image__title'); // название фото в попапе
@@ -126,7 +126,7 @@ buttonAdd.addEventListener('click', openPopupCard);
 
 popupCloseButton.addEventListener('click', closePopup);
 popupCloseButtonCard.addEventListener('click', closePopupCard);
-popupClosebuttonImg.addEventListener('click', closePopupImg); // закрываем по нажатию на крестик
+popupClosebuttonImg.addEventListener('click', closePopupImg); // закрываем по нажатию на крестик попапа
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
