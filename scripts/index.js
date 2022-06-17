@@ -119,7 +119,7 @@ const popupClosebuttonImg = document.querySelector('.popup-image__close');
 const titleImg = document.querySelector('.popup-image__title'); // название фото в попапе
 const popupImg = document.querySelector('.popup-image'); // весь попап
 const popupName = document.querySelector('.cards__name'); // название на странице
-const popupFullImg = document.querySelector('.popup-img__img'); // картинка в попапе
+const popupFullImg = document.querySelector('.popup-image__img'); // картинка в попапе
 
 button.addEventListener('click', openPopup);
 buttonAdd.addEventListener('click', openPopupCard);
