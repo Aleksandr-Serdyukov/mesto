@@ -14,7 +14,7 @@
   transition: visibility 0s, opacity 0.2s linear;
 }
 
-.popup-card {
+/* .popup-card {
   display: flex;
   position: fixed;
   left: 0;
@@ -28,20 +28,5 @@
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.2s linear;
-}
+} */
 
-.popup-image {
-  display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 2;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.2s linear;
-}

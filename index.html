@@ -44,7 +44,7 @@
             </li>
         </template>
     </div>
-    <div class="popup">
+    <div class="popup popup-editing">
         <div class="popup__content">
             <button type="button" class="popup__close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
@@ -55,24 +55,25 @@
             </form>
           </div>
     </div>
-    <div class="popup-card">
+    <div class="popup popup-card">
         <div class="popup-card__content">
             <button type="button" class="popup-card__close"></button>
             <h2 class="popup-card__title">Новое место</h2>
-            <form name="content" class="popup-card__form">
-              <input type="text" name="name" placeholder="Название" class="popup-card__path popup-card__path_field_place">
-              <input type="text" name="description" placeholder="Ссылка на картинку" class="popup-card__path popup-card__path_field_path">
+            <form name="contentCard" class="popup-card__form">
+              <input required type="text" name="name" placeholder="Название" class="popup-card__path popup-card__path_field_place">
+              <input required type="url" name="description" placeholder="Ссылка на картинку" class="popup-card__path popup-card__path_field_path">
               <button type="submit" class="popup-card__create">Создать</button>
             </form>
           </div>
     </div>
-    <div class="popup-image">
+    <div class="popup popup-image">
         <div class="popup-image__content">
             <button type="button" class="popup-image__close"></button>
             <img src="#" alt="Фото" class="popup-image__img">
             <h2 class="popup-image__title"></h2>
         </div>
     </div>
+    <script src="./scripts/initial-сards.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 </html>
