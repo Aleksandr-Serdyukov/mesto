@@ -24,28 +24,35 @@ const popupImg = document.querySelector('.popup-image'); // весь попап
 const popupName = document.querySelector('.cards__name'); // название на странице
 const popupFullImg = document.querySelector('.popup-image__img'); // картинка в попапе
 
-function renderItem (cardDetails) {
-  const ContainerCards = itemTemplate.querySelector('.cards__card').cloneNode(true);
-  const cardsImg = ContainerCards.querySelector('.cards__image');
-  ContainerCards.querySelector('.cards__name').textContent = cardDetails.name;
-  cardsImg.src = cardDetails.link;
+function сreateCard (cardDetails) {
+  const containerCards = itemTemplate.querySelector('.cards__card').cloneNode(true);
+  const cardsImg = containerCards.querySelector('.cards__image'); 
+  const cardsNames = containerCards.querySelector('.cards__name');
+  containerCards.querySelector('.cards__name').textContent = placeInput.value;
+  containerCards.querySelector('.cards__image').src = linkInput.value;
+  cardsImg.src = cardDetails.link; //тут добавлнеие данного массива из 6к
   cardsImg.alt = cardDetails.name;
+  cardsNames.textContent = cardDetails.name;
 
-  ContainerCards.querySelector('.cards__like').addEventListener('click', like); // лайк
-  ContainerCards.querySelector('.cards__delete').addEventListener('click', function() { // удаление
-    deleteCard(ContainerCards);
+  containerCards.querySelector('.cards__like').addEventListener('click', like); // лайк
+  containerCards.querySelector('.cards__delete').addEventListener('click', function() { // удаление
+    deleteCard(containerCards);
   });
 
   cardsImg.addEventListener('click', function() { // передаем в попап с фото значения со страницы
     popupFullImg.src = cardsImg.src;
     popupFullImg.alt = cardsImg.alt;
-    titleImg.textContent = ContainerCards.querySelector('.cards__name').textContent;
+    titleImg.textContent = containerCards.querySelector('.cards__name').textContent;
     openFullImg();
   });
 
-  cardsContainer.appendChild(ContainerCards);
+  return containerCards
+};
+
+function renderItem (terr) { // данные на создание карточки в ul до закрытия
+  cardsContainer.prepend(terr);
 }
-// тут конец
+
 function like(evt) {
   evt.target.classList.toggle('cards__like_active');
 }
@@ -54,18 +61,16 @@ function deleteCard (item) {
   item.remove();
 }
 
-function renderItemAdd () { // ЭТО ДОБАВЛЕНИЕ КАРТОЧКИ
-  const ContainerCards = itemTemplate.querySelector('.cards__card').cloneNode(true);
-  ContainerCards.querySelector('.cards__name').textContent = placeInput.value;
-  ContainerCards.querySelector('.cards__image').src = linkInput.value;
-  cardsContainer.prepend(ContainerCards);
-}
-
-function createItem (evt) { // добавляет карточку и закрывает попап
+function createItem (evt) { // добавляет карточку на страницу и закрывает попап
   evt.preventDefault();
-  closeImg();
-  renderItemAdd();
+  const newCardName = placeInput.value;
+  const newCardLink = linkInput.value;
+  const card =  сreateCard({name: newCardName, link: newCardLink});
+  console.log(card);
+  renderItem(card);
+  console.log(renderItem(card));
   formElementCard.reset();
+  closeImg();
  }
 
  function editingFormSubmitHandler (evt) { // вводим данные в профиль, передаем их на страницу и закрыаем попап
@@ -75,17 +80,6 @@ function createItem (evt) { // добавляет карточку и закры
   closeEditing();
 }
 
-// function openPopup() {
-//   popupEditingTwo.classList.add('popup_opened');
-//   nameInput.value = profileTitle.textContent;
-//   jobInput.value = profileSubtitle.textContent;
-// }
-
-// function closePopup() {
-//   popupEditingTwo.classList.remove('popup_opened');
-// }
-
-/////////////////////// ............
 function openPopup(popup) { // ОТКРЫТИЕ, общий попап, сюда вставляем нужный
   popup.classList.add('popup_opened');
 }
@@ -128,4 +122,7 @@ popupClosebuttonImg.addEventListener('click', closeFullImg); // закрывае
 
 formElementEditing.addEventListener('submit', editingFormSubmitHandler);
 formElementCard.addEventListener('submit', createItem);
-initialCards.forEach(renderItem);
+initialCards.forEach( function (cardDetails) {
+  const card =  сreateCard(cardDetails);
+  renderItem(card);
+});
